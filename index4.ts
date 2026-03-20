@@ -1,8 +1,8 @@
 // oop
 
 class Person {
-    name :string;
-    age :number;
+   protected name :string;
+   protected age :number;
 
     constructor(name: string, age: number) {
         this.name = name;
@@ -15,7 +15,7 @@ class Person {
 }
 
 class Student extends Person {
-    grade :number;
+    protected grade :number;
 
     constructor(name: string, age: number, grade: number) {
         super(name, age);
@@ -24,7 +24,7 @@ class Student extends Person {
 
 
     study() {
-        console.log(`${this.name} is studying.`);
+        console.log(`${this.name} is studying and is in grade ${this.grade}.`);
     }
 }
 
